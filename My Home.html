@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="txt/html; charset=utf-8" />
+        <title>
+            New Tab
+        </title>
+        <!--<link rel="stylesheet" href="cs.css">-->
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+            ul{
+                position: relative;
+                top: 650px;
+                height: 300px;
+                width: 640px;
+                margin: 0 auto;
+            }
+            ul li{
+                background: rgba(255, 255, 255, 0.6);
+                box-sizing: border-box;
+                border: 1px solid #444444;
+                border-radius: 8px;
+                height: 140px;
+                width: 102px;
+                float: left;
+                margin-right: 20px;
+            }
+            ul li:last-child{
+                margin-right: 0px;
+            }
+            ul li a{
+                text-decoration: none;
+            }
+            .icon{
+                width: 80px;
+                height: 80px;
+                position: relative;
+                top: 10px;
+                left: 10px;
+            }
+            .icon img{
+                border-radius: 8px;
+                background-size: cover;
+                height: 100%;
+                width: 100%;
+            }
+            .title p{
+                text-align: center;
+                color: #000;
+            }
+            .title{
+                height: 40px;
+                position: relative;
+            }
+            .outer{
+                width: 100px;
+                height: 140px;
+            }
+            .inner{
+                height: 100px;
+            }
+            body{
+                width: 100%;
+                height: 100%;
+                background-image: url(Emilia.png);
+                background-repeat: no-repeat;
+                background-size:cover;
+                background-attachment: fixed;
+            }
+            .search-box {
+				position: absolute;
+				top: 30%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background: rgba(104, 104, 104,0.3);
+				height: 40px;
+				border-radius: 40px;
+				padding: 10px;
+			}
+			.search-btn {
+				color: #e84118;
+				float: right;
+				width: 40px;
+				height: 40px;
+                border: 1px;
+                border: rgba(0, 0, 0, 0);
+				border-radius: 50%;
+				background: rgba(104, 104, 104,0.3);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				transition: 0.4s;
+				text-decoration: none;
+			}
+			.search-txt {
+				border: none;
+				background: none;
+				outline: none;
+				float: left;
+				padding: 0;
+				color: black;
+				font-size: 16px;
+				transition: 0.4s;
+				line-height: 40px;
+				width: 0;
+			}
+			.search-box:hover > .search-txt {
+				width: 240px;
+				padding: 0 6px;
+			}
+			.search-box:hover > .search-btn {
+				background: rgba(71, 71, 71,0.45);
+			}
+        </style>
+        
+        <script type="text/javascript">
+            function c(){
+                var obj=document.getElementById("tp");
+                var v=obj.value;
+                window.location="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd="+v;
+            }
+        </script>
+    </head>
+    <body onkeydown="if(event.keyCode==13){c()}">
+        <div class="search-box">
+			<input class="search-txt" type="text" id="tp" placeholder="Type to search" />
+            <button class="search-btn" onclick="c()">
+                <i class="fas fa-search"></i>
+            </button>
+		</div>
+        <ul>
+            <li>
+                <a href="https://www.baidu.com">
+                    <div class="outer">
+                        <div class="inner">
+                            <div class="icon">
+                                <img src="Baidu.png" alt="">
+                            </div>
+                        </div>
+                        <div class="title">
+                            <p>
+                                Baidu
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.bilibili.com">
+                    <div class="outer">
+                        <div class="inner">
+                            <div class="icon">
+                                <img src="Bilibili2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="title">
+                            <p>
+                                Bilibili
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.pixiv.net">
+                    <div class="outer">
+                        <div class="inner">
+                            <div class="icon">
+                                <img src="Pixiv.png" alt="">
+                            </div>
+                        </div>
+                        <div class="title">
+                            <p>
+                                Pixiv
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com">
+                    <div class="outer">
+                        <div class="inner">
+                            <div class="icon">
+                                <img src="YouTube.png" alt="">
+                            </div>
+                        </div>
+                        <div class="title">
+                            <p>
+                                Youtube
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.google.com">
+                    <div class="outer">
+                        <div class="inner">
+                            <div class="icon">
+                                <img src="Google.png" alt="">
+                            </div>
+                        </div>
+                        <div class="title">
+                            <p>
+                                Google
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            
+        </ul>
+    </body>
+</html>
